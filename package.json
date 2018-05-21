@@ -1,0 +1,51 @@
+{
+    "name": "mcss-syntax-highlight",
+    "displayName": "mcss syntax highlight",
+    "description": "Syntax highlight for mcss files",
+    "version": "0.0.1",
+    "publisher": "villematti",
+    "engines": {
+        "vscode": "^1.23.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onLanguage:mcss"
+    ],
+    "main": "./out/extension",
+    "contributes": {
+        "languages": [
+            { 
+                "id": "mscc",
+                "aliases": [
+                    "mscc"
+                ],
+                "extensions": [
+                    ".mscc"
+                ] 
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mscc",
+                "scopeName": "text.mscc",
+                "path": "./syntaxes/mcss.tmLanguage"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "typescript": "^2.6.1",
+        "vscode": "^1.1.6",
+        "tslint": "^5.8.0",
+        "@types/node": "^7.0.43",
+        "@types/mocha": "^2.2.42"
+    }
+}
