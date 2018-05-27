@@ -7,6 +7,10 @@
     "engines": {
         "vscode": "^1.23.0"
     },
+    "repository" :{
+        "type" : "git",
+        "url" : "https://github.com/villematti/mcss-syntax-highlight.git"
+    },
     "categories": [
         "Other"
     ],
@@ -17,19 +21,19 @@
     "contributes": {
         "languages": [
             { 
-                "id": "mscc",
+                "id": "mcss",
                 "aliases": [
-                    "mscc"
+                    "mcss"
                 ],
                 "extensions": [
-                    ".mscc"
+                    ".mcss"
                 ] 
             }
         ],
         "grammars": [
             {
-                "language": "mscc",
-                "scopeName": "text.mscc",
+                "language": "mcss",
+                "scopeName": "source.css.less",
                 "path": "./syntaxes/mcss.tmLanguage"
             }
         ]
